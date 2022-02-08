@@ -269,11 +269,25 @@ object Config : Vigilant(File("./config/skytils/config.toml"), "Skytils", sortin
     var sendMessageOn270Score = false
 
     @Property(
+        type = PropertyType.TEXT, name = "270 Score message",
+        description = "Sets the message that will be sent when the score reaches 270. \n§aBy MattyHD0",
+        category = "Dungeons", subcategory = "Score Calculation"
+    )
+    var score270Message = "Skytils > 270 score"
+
+    @Property(
         type = PropertyType.SWITCH, name = "Send message on 300 score",
         description = "Send message on 300 score.",
         category = "Dungeons", subcategory = "Score Calculation"
     )
     var sendMessageOn300Score = false
+
+    @Property(
+        type = PropertyType.TEXT, name = "300 Score message",
+        description = "Sets the message that will be sent when the score reaches 300. \n§aBy MattyHD0",
+        category = "Dungeons", subcategory = "Score Calculation"
+    )
+    var score300Message = "Skytils > 300 score"
 
     @Property(
         type = PropertyType.SWITCH, name = "Box Skeleton Masters",
@@ -1297,6 +1311,13 @@ object Config : Vigilant(File("./config/skytils/config.toml"), "Skytils", sortin
         category = "Miscellaneous", subcategory = "Other"
     )
     var hideTooltipsOnStorage = false
+
+    @Property(
+        type = PropertyType.SWITCH, name = "Item Creation Date",
+        description = "Shows you the date the item was created. \n§aBy MattyHD0",
+        category = "Miscellaneous", subcategory = "Other"
+    )
+    var itemCreationDate = false
 
     @Property(
         type = PropertyType.SWITCH, name = "Copy Deaths to Clipboard",

@@ -217,11 +217,11 @@ object ScoreCalculation {
                 }
                 if (Skytils.config.sendMessageOn270Score && !hasSaid270 && score >= 270) {
                     hasSaid270 = true
-                    Skytils.sendMessageQueue.add("/pc Skytils > 270 score")
+                    Skytils.sendMessageQueue.add("/pc ${Skytils.config.score270Message}")
                 }
                 if (Skytils.config.sendMessageOn300Score && !hasSaid300 && score >= 300) {
                     hasSaid300 = true
-                    Skytils.sendMessageQueue.add("/pc Skytils > 300 score")
+                    Skytils.sendMessageQueue.add("/pc ${Skytils.config.score300Message}")
                 }
             }
         }

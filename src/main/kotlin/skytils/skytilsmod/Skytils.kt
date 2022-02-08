@@ -23,6 +23,7 @@ import com.google.gson.GsonBuilder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.asCoroutineDispatcher
+import mattyhd0.event.ItemCreationDate
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.GuiButton
 import net.minecraft.client.gui.GuiIngameMenu
@@ -115,6 +116,7 @@ class Skytils {
         val mc: Minecraft
             get() = Minecraft.getMinecraft()
 
+        @JvmField
         val config = Config
 
         @JvmField
@@ -250,6 +252,7 @@ class Skytils {
             TriviaSolver(),
             WaterBoardSolver(),
             Waypoints(),
+            ItemCreationDate()
         ).forEach(MinecraftForge.EVENT_BUS::register)
     }
 
